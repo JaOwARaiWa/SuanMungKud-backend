@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 
-class DatabaseSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -64,5 +64,9 @@ class DatabaseSeeder extends Seeder
                 'bank_account' => '9876543210',
             ],
         ];
+
+        foreach($users as $user){
+            User::create($user);
+        }
     }
 }

@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->enum('role', ['ADMIN', 'EMPLOYEE'])->default('EMPLOYEE');
+            $table->enum('role', ['ADMIN', 'EMPLOYEE', 'PARTNER'])->default('ADMIN');
         });
     }
 

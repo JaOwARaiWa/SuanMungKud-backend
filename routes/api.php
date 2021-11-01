@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Api\LoginController;
+use App\Http\Controllers\Api\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,8 @@ Route::group([
     Route::post('login', [LoginController::class, 'login']);
     Route::post('logout', [LoginController::class, 'logout']);
 });
+
+//Admin route
+Route::post('/admin/create-user', [AdminController::class, 'create_user']);
+Route::post('/admin/remove-user', [AdminController::class, 'remove_user']);
+Route::get('/admin/all-users', [AdminController::class, 'all_users']);

@@ -17,13 +17,13 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('telephone');
+            $table->string('password');
+            $table->string('contact_number');
             $table->string('bank_account');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->enum('role', ['ADMIN', 'EMPLOYEE', 'PARTNER'])->default('ADMIN');
+            $table->enum('role', ['ADMIN', 'EMPLOYEE', 'PARTNER']);
         });
     }
 

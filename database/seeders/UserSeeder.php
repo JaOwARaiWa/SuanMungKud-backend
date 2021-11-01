@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
                 'email' => 'admin0@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'ADMIN',
-                'telephone' => '0907981187',
+                'contact_number' => '0907981187',
                 'bank_account' => '6210450032',
             ],
             [
@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
                 'email' => 'admin1@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'ADMIN',
-                'telephone' => '0968828238',
+                'contact_number' => '0968828238',
                 'bank_account' => '6210450466',
             ],
             [
@@ -36,7 +36,7 @@ class UserSeeder extends Seeder
                 'email' => 'admin2@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'ADMIN',
-                'telephone' => '0889282786',
+                'contact_number' => '0889282786',
                 'bank_account' => '6210451403',
             ],
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,7 +45,7 @@ class UserSeeder extends Seeder
                 'email' => 'employee0@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
-                'telephone' => '0987654321',
+                'contact_number' => '0987654321',
                 'bank_account' => '1234567890',
             ],
             [
@@ -53,7 +53,7 @@ class UserSeeder extends Seeder
                 'email' => 'employee1@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
-                'telephone' => '0900000000',
+                'contact_number' => '0900000000',
                 'bank_account' => '9876543210',
             ],
             [
@@ -61,7 +61,7 @@ class UserSeeder extends Seeder
                 'email' => 'employee2@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
-                'telephone' => '0811111111',
+                'contact_number' => '0811111111',
                 'bank_account' => '7410852963',
             ],
             [
@@ -69,7 +69,7 @@ class UserSeeder extends Seeder
                 'email' => 'employee3@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
-                'telephone' => '0922222222',
+                'contact_number' => '0922222222',
                 'bank_account' => '0123456789',
             ],
             [
@@ -77,16 +77,16 @@ class UserSeeder extends Seeder
                 'email' => 'employee4@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
-                'telephone' => '0933333333',
+                'contact_number' => '0933333333',
                 'bank_account' => '7539518624',
             ],
             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             [
-                'name' => 'ผู้รับซื้อรายใหญ่',
+                'name' => 'Big Deal',
                 'email' => 'partner0@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'PARTNER',
-                'telephone' => '0844444444',
+                'contact_number' => '0844444444',
                 'bank_account' => '9638527410',
             ],
         ];

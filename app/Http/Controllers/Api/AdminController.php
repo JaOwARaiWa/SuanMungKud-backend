@@ -30,14 +30,16 @@ class AdminController extends Controller
         ]);
     }
 
-    public function remove_user(Request $request) {
-        $user = User::find($request->input('id'));
+    public function delete_user($id) {
+        $user = User::findOrFail($id);
         $user->delete();
 
-        return "remove success";
+        $users = User::get();
+
+        return response()->json($users);
     }
 
-    public function all_users(Request $request) {
+    public function all_users() {
         $users = User::get();
         // $admins = array();
         // $employees = array();
@@ -64,5 +66,17 @@ class AdminController extends Controller
         // }
 
         return response()->json($users);
+    }
+
+    public function all_employees() {
+        $users = User::get();
+        $employees = array();
+        foreach ($users as $user) {
+            if ($user->role == "EMPLOYEE") {
+                array_push($employees, $user);
+            }
+        }
+
+        return response()->json($employees);
     }
 }

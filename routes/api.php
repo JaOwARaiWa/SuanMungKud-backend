@@ -33,5 +33,7 @@ Route::group([
 //Admin route
 Route::post('/admin/create-user', [AdminController::class, 'create_user']);
 Route::post('/admin/delete-user/{id}', [AdminController::class, 'delete_user']);
+Route::post('/admin/assign-work', [AdminController::class, 'assign_work']);
 Route::get('/admin/all-users', [AdminController::class, 'all_users']);
 Route::get('/admin/all-employees', [AdminController::class, 'all_employees']);
+Route::get('/admin/can-assigned/{date}', [AdminController::class, 'can_assigned']);

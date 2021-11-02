@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Employee_Work;
 use App\Models\Work;
+use App\Models\Invoice;
 use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
@@ -85,6 +86,24 @@ class AdminController extends Controller
         ]);
     }
 
+    public function create_invoice(Request $request) {
+        $date = date("Y-m-d");
+
+        $invoice = [
+            'date' => $date,
+            'crate' => $request->input('crate'),
+            'delivery' => $request->input('delivery'),
+            'weight' => $request->input('weight'),
+            'price' => $request->input('price'),
+            'create_by' => $request->input('create_by'),
+            'to' => $request->input('to'),
+        ];
+
+        $create = Invoice::create($invoice);
+
+        return response()->json($create);
+    }
+
     public function can_assigned($date) {
         $works = Work::where("date", "=", $date)->get();
 
@@ -147,14 +166,12 @@ class AdminController extends Controller
     }
 
     public function all_employees() {
-        $users = User::get();
-        $employees = array();
-        foreach ($users as $user) {
-            if ($user->role == "EMPLOYEE") {
-                array_push($employees, $user);
-            }
-        }
+        $users = User::where("role", "=", "EMPLOYEE")->get();
+        return response()->json($users);
+    }
 
-        return response()->json($employees);
+    public function all_partners() {
+        $users = User::where("role", "=", "PARTNER")->get();
+        return response()->json($users);
     }
 }

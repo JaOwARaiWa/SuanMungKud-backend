@@ -37,3 +37,5 @@ Route::post('/admin/assign-work', [AdminController::class, 'assign_work']);
 Route::get('/admin/all-users', [AdminController::class, 'all_users']);
 Route::get('/admin/all-employees', [AdminController::class, 'all_employees']);
 Route::get('/admin/can-assigned/{date}', [AdminController::class, 'can_assigned']);
+Route::get('/admin/all-partners', [AdminController::class, 'all_partners']);
+Route::post('/admin/create-invoice', [AdminController::class, 'create_invoice']);

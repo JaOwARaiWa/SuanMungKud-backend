@@ -16,6 +16,7 @@ class CreateEmployeeWorksTable extends Migration
         Schema::create('employee_works', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->boolean('is_finished')->default(0);
 
             $table->unsignedBigInteger('work_id');
             $table->foreign('work_id')

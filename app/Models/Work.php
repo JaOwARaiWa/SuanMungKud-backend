@@ -16,11 +16,12 @@ class Work extends Model
         'name',
         'date',
         'assign_by',
+        'payment_status'
     ];
 
-    public function user() {
-        return $this->belongsTo(User::class);
-    }
+    // public function user() {
+    //     return $this->belongsTo(User::class);
+    // }
 
     public function employee_works() {
         return $this->hasMany(Employee_Work::class);

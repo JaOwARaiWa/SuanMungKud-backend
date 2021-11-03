@@ -15,13 +15,15 @@ class Employee_Work extends Model
     protected $fillable = [
         'work_id',
         'user_id',
+        'is_finished',
+        'date'
     ];
 
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function user_id() {
+        return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function work() {
-        return $this->belongsTo(Work::class);
+    public function work_id() {
+        return $this->belongsTo(Work::class, 'work_id');
     }
 }

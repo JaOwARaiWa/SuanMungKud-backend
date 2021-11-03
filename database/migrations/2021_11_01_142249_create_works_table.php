@@ -24,6 +24,8 @@ class CreateWorksTable extends Migration
                   ->references('id')
                   ->on('users')
                   ->cascadeOnDelete();
+
+            $table->enum("payment_status", ["ยังไม่จ่ายค่าจ้าง", "จ่ายค่าจ้างแล้ว"])->default("ยังไม่จ่ายค่าจ้าง");
         });
     }
 

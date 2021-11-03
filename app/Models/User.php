@@ -8,9 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Tymon\JWTAuth\Contracts\JWTSubject;
-use App\Models\Work;
 use App\Models\Employee_Work;
-use App\Models\Invoice;
+use App\Models\User_Invoice;
 
 class User extends Authenticatable implements JWTSubject
 {
@@ -59,15 +58,11 @@ class User extends Authenticatable implements JWTSubject
         ];
     }
 
-    public function works() {
-        return $this->hasMany(Work::class);
-    }
-
     public function employee_works() {
         return $this->hasMany(Employee_Work::class);
     }
 
-    public function invoices() {
+    public function user_invoices() {
         return $this->hasMany(Invoice::class);
     }
 }

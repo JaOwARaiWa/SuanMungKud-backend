@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
+use App\Models\User_Invoice;
 
 class Invoice extends Model
 {
@@ -13,7 +13,6 @@ class Invoice extends Model
 
     protected $fillable = [
         'date',
-        'assign_by',
         'crate',
         'delivery',
         'weight',
@@ -24,7 +23,7 @@ class Invoice extends Model
         'status',
     ];
 
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function user_invoices() {
+        return $this->hasMany(User_Invoice::class);
     }
 }

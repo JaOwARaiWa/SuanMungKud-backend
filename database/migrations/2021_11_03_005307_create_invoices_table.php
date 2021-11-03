@@ -22,20 +22,7 @@ class CreateInvoicesTable extends Migration
             $table->float('weight');
             $table->string('product')->default('มังคุด');
             $table->float('price');
-
-            $table->unsignedBigInteger('create_by');
-            $table->foreign('create_by')
-                  ->references('id')
-                  ->on('users')
-                  ->cascadeOnDelete();
-
-            $table->unsignedBigInteger('to');
-            $table->foreign('to')
-                ->references('id')
-                ->on('users')
-                ->cascadeOnDelete();
-
-            $table->enum('status', ['delivered', 'accepted'])->default('delivered');
+            $table->enum('status', ['กำลังจัดส่ง', 'ได้รับสินค้าแล้ว'])->default('กำลังจัดส่ง');
         });
     }
 

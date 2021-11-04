@@ -199,6 +199,10 @@ class AdminController extends Controller
 
     public function update_payment_status($id) {
         $work = Work::where("id", "=", $id)->update(["payment_status" => "จ่ายค่าจ้างแล้ว"]);
+
+        $date = date("Y-m-d");
+        $users = Employee_Work::where([["date", "=", $date], ['is_finished', "=", "เสร็จสิ้น"]])->update(["payment_status" => "ได้ค่าจ้างแล้ว"]);
+
         return response()->json([
             "message" => "updated"
         ]);

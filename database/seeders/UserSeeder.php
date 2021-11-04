@@ -23,26 +23,26 @@ class UserSeeder extends Seeder
                 'contact_number' => '0907981187',
                 'bank_account' => '6210450032',
             ],
+
             [
                 'name' => 'Suphaphit',
-                'email' => 'admin1@suan.com',
+                'email' => 'employee0@suan.com',
                 'password' => bcrypt('password'),
-                'role' => 'ADMIN',
+                'role' => 'EMPLOYEE',
                 'contact_number' => '0968828238',
                 'bank_account' => '6210450466',
             ],
             [
                 'name' => 'Yothanat',
-                'email' => 'admin2@suan.com',
+                'email' => 'employee1@suan.com',
                 'password' => bcrypt('password'),
-                'role' => 'ADMIN',
+                'role' => 'EMPLOYEE',
                 'contact_number' => '0889282786',
                 'bank_account' => '6210451403',
             ],
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             [
                 'name' => 'First',
-                'email' => 'employee0@suan.com',
+                'email' => 'employee2@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
                 'contact_number' => '0987654321',
@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Ping',
-                'email' => 'employee1@suan.com',
+                'email' => 'employee3@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
                 'contact_number' => '0900000000',
@@ -58,29 +58,13 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Yo',
-                'email' => 'employee2@suan.com',
+                'email' => 'employee4@suan.com',
                 'password' => bcrypt('password'),
                 'role' => 'EMPLOYEE',
                 'contact_number' => '0811111111',
                 'bank_account' => '7410852963',
             ],
-            [
-                'name' => 'Tungjai',
-                'email' => 'employee3@suan.com',
-                'password' => bcrypt('password'),
-                'role' => 'EMPLOYEE',
-                'contact_number' => '0922222222',
-                'bank_account' => '0123456789',
-            ],
-            [
-                'name' => 'Tumngan',
-                'email' => 'employee4@suan.com',
-                'password' => bcrypt('password'),
-                'role' => 'EMPLOYEE',
-                'contact_number' => '0933333333',
-                'bank_account' => '7539518624',
-            ],
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
             [
                 'name' => 'Big Deal',
                 'email' => 'partner0@suan.com',

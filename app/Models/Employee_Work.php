@@ -16,7 +16,8 @@ class Employee_Work extends Model
         'work_id',
         'user_id',
         'is_finished',
-        'date'
+        'date',
+        'payment_status',
     ];
 
     public function user_id() {

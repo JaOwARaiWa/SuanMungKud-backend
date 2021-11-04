@@ -17,23 +17,23 @@ class WorkSeeder extends Seeder
         $works = [
             [
                 'name' => "เก็บผลไม้",
-                'date' => "2021-10-29",
+                'date' => "2021-11-01",
                 'assign_by' => 1,
             ],
             [
                 'name' => "เก็บผลไม้",
-                'date' => "2021-10-30",
+                'date' => "2021-11-02",
                 'assign_by' => 2,
             ],
             [
                 'name' => "เก็บผลไม้",
-                'date' => "2021-10-31",
-                'assign_by' => 3,
+                'date' => "2021-11-03",
+                'assign_by' => 1,
             ],
             [
                 'name' => "เก็บผลไม้",
-                'date' => "2021-11-01",
-                'assign_by' => 1,
+                'date' => "2021-11-04",
+                'assign_by' => 2,
             ],
         ];
 

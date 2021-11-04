@@ -16,7 +16,7 @@ class CreateEmployeeWorksTable extends Migration
         Schema::create('employee_works', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('is_finished')->default("กำลังทำ");
+            $table->enum('is_finished', ['กำลังทำ','เสร็จสิ้น'])->default("กำลังทำ");
 
             $table->unsignedBigInteger('work_id');
             $table->foreign('work_id')
@@ -31,6 +31,7 @@ class CreateEmployeeWorksTable extends Migration
                     ->cascadeOnDelete();
                 
             $table->date('date')->default(date("Y-m-d"));
+            $table->enum("payment_status", ["ยังไม่ได้ค่าจ้าง", "ได้ค่าจ้างแล้ว"])->default("ยังไม่ได้ค่าจ้าง");
         });
     }
 
